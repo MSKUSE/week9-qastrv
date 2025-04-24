@@ -1,14 +1,14 @@
-public class Rectangle extends Shape{
-
+public class Rectangle extends Shape {
     private int sideA, sideB;
 
-    public Rectangle(){
+    public Rectangle() {
         super();
     }
-    public Rectangle(String color, int sideA, int sideB){
+
+    public Rectangle(String color, int sideA, int sideB) {
         super(color);
-        this.sideA = 1;
-        this.sideB = 1;
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     public int getSideA() {
@@ -34,7 +34,7 @@ public class Rectangle extends Shape{
 
     @Override
     public double perimeter() {
-        return 2*(sideA + sideB);
+        return 2 * (sideA + sideB);
     }
 
     @Override
@@ -51,7 +51,8 @@ public class Rectangle extends Shape{
         if (this == obj) return true;
         if (!(obj instanceof Rectangle)) return false;
         Rectangle rectangle = (Rectangle) obj;
-        return sideA == rectangle.sideA && sideB == rectangle.sideB;
+        return sideA == rectangle.sideA &&
+                sideB == rectangle.sideB &&
+                getColor().equals(rectangle.getColor());
     }
-
 }

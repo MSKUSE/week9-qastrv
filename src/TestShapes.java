@@ -1,7 +1,5 @@
 public class TestShapes {
     public static void main(String[] args) {
-
-
         Shape shape = new Shape("red");
         System.out.println(shape);
         System.out.println("Area: " + shape.area());
@@ -27,7 +25,6 @@ public class TestShapes {
         System.out.println("Perimeter: " + rectangle.perimeter());
         System.out.println("------------------------------------------------------------------");
 
-
         Shape rectangle1 = new Rectangle("green", 4, 6);
         System.out.println(rectangle1);
         System.out.println("Area: " + rectangle1.area());
@@ -50,7 +47,5 @@ public class TestShapes {
 
         System.out.println("Circle equals Rectangle: " + circle.equals(rectangle));
         System.out.println("Circle equals Triangle: " + circle.equals(triangle));
-
-
     }
 }
